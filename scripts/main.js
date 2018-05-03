@@ -43,6 +43,7 @@ app.checkScore = function(array) {
     
 }
 
+//this turns the newly tallied app.tally into an array 
 app.largestNumber = function() {
     const tallyEntries = Object.entries(app.tally);
     console.log(tallyEntries);
@@ -63,7 +64,7 @@ app.displayAnswer = (answer) => {
 }
 
 app.events = function() {
-    $('form').on('submit', function(e){
+    $('input[type=submit]').on('click', function(e){
         //prevent the page from refreshing
         e.preventDefault();
         //want to save each answer as a variable 
@@ -77,19 +78,93 @@ app.events = function() {
         //enter answerArray into the tallying function
         app.checkScore(answerArray);  
     });
+
+    //button functionality 
+    $('.takeQuiz').on('click', function(){
+        $('.headerContainer').hide()
+        $('.question1').fadeIn()
+    });
+
+    //previous/next bundle question 1
+    $('.previous1').on('click', function(e){
+        e.preventDefault();
+        $('.question1').hide()
+        $('.headerContainer').fadeIn()
+
+    })
+    $('.next1').on('click', function (e) {
+        e.preventDefault();
+        $('.question1').hide()
+        $('.question2').fadeIn()
+
+    })
+
+    //previous/next bundle question 2
+    $('.previous2').on('click', function (e) {
+        e.preventDefault();
+        $('.question2').hide()
+        $('.question1').fadeIn()
+
+    })
+    $('.next2').on('click', function (e) {
+        e.preventDefault();
+        $('.question2').hide()
+        $('.question3').fadeIn()
+    })
+
+    //previous/next bundle question 3
+    $('.previous3').on('click', function (e) {
+        e.preventDefault();
+        $('.question3').hide()
+        $('.question2').fadeIn()
+
+    })
+    $('.next3').on('click', function (e) {
+        e.preventDefault();
+        $('.question3').hide()
+        $('.question4').fadeIn()
+    })
+
+    //previous/next bundle question 4
+    $('.previous4').on('click', function (e) {
+        e.preventDefault();
+        $('.question4').hide()
+        $('.question3').fadeIn()
+
+    })
+    $('.next4').on('click', function (e) {
+        e.preventDefault();
+        $('.question4').hide()
+        $('.question5').fadeIn()
+    })
+
+    //previous/next bundle question 5
+    $('.previous5').on('click', function (e) {
+        e.preventDefault();
+        $('.question5').hide()
+        $('.question4').fadeIn()
+    })
 }
 
+//results funcitonality 
 app.printResultsOnPage = function(result, description) {
-    $('input[type=submit]').hide();
-    $('.results').append(`
-    <h2>${result}</h2>
-    <h2>${description}</h2>
-    <button>Take the quiz again!</button>
-    `);
-    $('button').on('click', function(){
-        location.reload(true);
+    $('input[type=submit]').on('click', function(){
+        $('.question5').hide();
+        $('.results').empty();
+        $('.results').css('display:flex');
+        $('.results').show();
+        $('.results').append(`
+        <h2>${result}</h2>
+        <h2>${description}</h2>
+        <button class="retake">Take the quiz again!</button>
+        `);
+        $('.retake').on('click', function(){
+            location.reload(true);
+        });
     });
 };
+
+
 
 app.init = function(){
     app.events();
@@ -98,3 +173,34 @@ app.init = function(){
 $(function(){
     app.init();
 });
+
+//adding twitter 
+window.twttr = (function (d, s, id) {
+
+    var js, fjs = d.getElementsByTagName(s)[0],
+
+        t = window.twttr || {};
+
+    if (d.getElementById(id)) return t;
+
+    js = d.createElement(s);
+
+    js.id = id;
+
+    js.src = "https://platform.twitter.com/widgets.js";
+
+    fjs.parentNode.insertBefore(js, fjs);
+
+
+
+    t._e = [];
+
+    t.ready = function (f) {
+
+        t._e.push(f);
+
+    };
+
+    return t;
+
+}(document, "script", "twitter-wjs"));

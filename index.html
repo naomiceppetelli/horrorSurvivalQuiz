@@ -6,110 +6,192 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survival of the Fittest: Horror Movie Edition</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Biryani|Nunito|Seymour+One|Creepster|Nosifer" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Biryani|Nunito|Source+Sans+Pro|Creepster|Nosifer" rel="stylesheet">
 </head>
-<body>
+<body data-depth='0.00'>
     <header>
-        <h1>Survival of the Fittest: Horror Movie Edition</h1>
-        <h2>If thrown into a horror movie, how likely are you to survive?</h2>
-        <h2>Take the quiz to find out!</h2>
+        <img class='longBloodDrip' src="images/free_blood-dripping_vector_02.png" alt="">
+        <img class='bloodSplat' src="images/free_blood-dripping_vector_04.png" alt=""> 
+        <img class='bloodDrip' src="images/free_blood-dripping_vector_03.png" alt="">
+        <div class="headerContainer">
+            <h1 class='text-shadow-pop-tl'> Horror Movie Hoedown</h1>
+            <h2>You're suddenly thrust into a horror movie, do you survive?</h2>
+            <button class="takeQuiz">Take the quiz to find out</button>
+        </div>
     </header>
     <main>
         <form action="#" method="POST">
-            <section class="question1">
+            <section class="question question1">
                 <div class="questionContainer">
                     <h2>What is your version of practical footwear?</h2>
-                    <div class="answerContainer">
-                        <input type="radio" id="question1a" value="very" name="question1">
-                        <label for="question1a">Sneakers</label>
-                        <input type="radio" id="question1b" value="somewhat" name="question1">
-                        <label for="question1b">Boots</label>
-                        <input type="radio" id="question1c" value="unlikely" name="question1">
-                        <label for="question1c">Birkenstocks</label>
-                        <input type="radio" id="question1d" value="notVery" name="question1">
-                        <label for="question1d">Heels</label>
-                        <input type="radio" id="question1e" value="killer" name="question1">
-                        <label for="question1e">Crocs</label>
+                    <ul class="answerContainer">
+                        <li>
+                            <input type="radio" id="question1a" value="very" name="question1">
+                            <label for="question1a">Sneakers</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question1b" value="somewhat" name="question1">
+                            <label for="question1b">Boots</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question1c" value="unlikely" name="question1">
+                            <label for="question1c">Birkenstocks</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question1d" value="notVery" name="question1">
+                            <label for="question1d">Heels</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question1e" value="killer" name="question1">
+                            <label for="question1e">Crocs</label>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="previous1">Previous</button>
+                        <button class="next1">Next</button>
                     </div>
                 </div>
             </section>
-            <section class="question2">
+            <section class="question question2">
                 <div class="questionContainer">
                     <h2>How in shape are you?</h2>
-                    <div class="answerContainer">
-                        <input type="radio" id="question2a" value="very" name="question2">
-                        <label for="question2a">I can run a 7 minute mile</label>
-                        <input type="radio" id="question2b" value="notVery" name="question2">
-                        <label for="question2b">A brisk walk winds me but I've got heart</label>
-                        <input type="radio" id="question2c" value="killer" name="question2">
-                        <label for="question2c">I don't need to be the most in shape, I just need to be faster than the slowest person</label>
-                        <input type="radio" id="question2d" value="somewhat" name="question2">
-                        <label for="question2d">I think I could outrun the killer if my life was on the line</label>
-                        <input type="radio" id="question2e" value="unlikely" name="question2">
-                        <label for="question2e">So out of shape my first instinct is to hide</label>
+                    <ul class="answerContainer">
+                        <li>
+                            <input type="radio" id="question2a" value="very" name="question2">
+                            <label for="question2a">I can run a 7 minute mile</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question2b" value="notVery" name="question2">
+                            <label for="question2b">A brisk walk winds me but I've got heart</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question2c" value="killer" name="question2">
+                            <label for="question2c">I don't need to be the most in shape, I just need to be faster than the slowest person</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question2d" value="somewhat" name="question2">
+                            <label for="question2d">I think I could outrun the killer if my life was on the line</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question2e" value="unlikely" name="question2">
+                            <label for="question2e">So out of shape my first instinct is to hide</label>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="previous2">Previous</button>
+                        <button class="next2">Next</button>
                     </div>
                 </div>
             </section>
-            <section class="question3">
+            <section class="question question3">
                 <div class="questionContainer">
                     <h2>What best describes you in a group setting?</h2>
-                    <div class="answerContainer">
-                        <input type="radio" id="question3a" value="killer" name="question3">
-                        <label for="question3a">Schemer</label>
-                        <input type="radio" id="question3b" value="very" name="question3">
-                        <label for="question3b">Leader</label>
-                        <input type="radio" id="question3c" value="somewhat" name="question3">
-                        <label for="question3c">Right-hand person</label>
-                        <input type="radio" id="question3d" value="unlikely" name="question3">
-                        <label for="question3d">Daydreaming</label>
-                        <input type="radio" id="question3e" value="notVery" name="question3">
-                        <label for="question3e">Obedient</label>
+                    <ul class="answerContainer">
+                        <li>
+                            <input type="radio" id="question3a" value="killer" name="question3">
+                            <label for="question3a">Schemer</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question3b" value="very" name="question3">
+                            <label for="question3b">Leader</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question3c" value="somewhat" name="question3">
+                            <label for="question3c">Right-hand person</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question3d" value="unlikely" name="question3">
+                            <label for="question3d">Daydreaming</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question3e" value="notVery" name="question3">
+                            <label for="question3e">Obedient</label>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="previous3">Previous</button>
+                        <button class="next3">Next</button>
                     </div>
                 </div>
             </section>
-            <section class="question4">
+            <section class="question question4">
                 <div class="questionContainer">
                     <h2>Is pineapple a delicious pizza topping?</h2>
-                    <div class="answerContainer">
-                        <input type="radio" id="question4a" value="very" name="question4">
-                        <label for="question4a">YES DUH</label>
-                        <input type="radio" id="question4b" value="somewhat" name="question4">
-                        <label for="question4b">Only with ham</label>
-                        <input type="radio" id="question4c" value="notVery" name="question4">
-                        <label for="question4c">I'll eat it if I have to</label>
-                        <input type="radio" id="question4d" value="unlikely" name="question4">
-                        <label for="question4d">I'll pick it off or eat around it</label>
-                        <input type="radio" id="question4e" value="killer" name="question4">
-                        <label for="question4e">Absolutely, positively not</label>
-                    </div>
+                    <ul class="answerContainer">
+                        <li>
+                            <input type="radio" id="question4a" value="very" name="question4">
+                            <label for="question4a">YES DUH</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question4b" value="somewhat" name="question4">
+                            <label for="question4b">Only with ham</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question4c" value="notVery" name="question4">
+                            <label for="question4c">I'll eat it if I have to</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question4d" value="unlikely" name="question4">
+                            <label for="question4d">I'll pick it off or eat around it</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question4e" value="killer" name="question4">
+                            <label for="question4e">Absolutely, positively not</label>
+                        </ul>
+                        </li>
+                        <div class="buttons">
+                            <button class="previous4">Previous</button>
+                            <button class="next4">Next</button>
+                        </div>
                 </div>
             </section>
-            <section class="question5">
+            <section class="question question5">
                 <div class="questionContainer">
                     <h2>The Killer has you at knifepoint - what is your favourite genre of music? (every time you answer "I like a bit of everything" they jab you a little)</h2>
-                    <div class="answerContainer">
-                        <input type="radio" id="question5a" value="very" name="question5">
-                        <label for="question5a">HipHop</label>
-                        <input type="radio" id="question5b" value="killer" name="question5">
-                        <label for="question5b">Country</label>
-                        <input type="radio" id="question5c" value="notVery" name="question5">
-                        <label for="question5c">Pop/R&B</label>
-                        <input type="radio" id="question5d" value="somewhat" name="question5">
-                        <label for="question5d">Metal</label>
-                        <input type="radio" id="question5e" value="notVery" name="question5">
-                        <label for="question5e">Vague Millenial Indie Rock</label>
+                    <ul class="answerContainer">
+                        <li>
+                            <input type="radio" id="question5a" value="very" name="question5">
+                            <label for="question5a">HipHop</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question5b" value="killer" name="question5">
+                            <label for="question5b">Country</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question5c" value="notVery" name="question5">
+                            <label for="question5c">Pop/R&B</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question5d" value="somewhat" name="question5">
+                            <label for="question5d">Metal</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="question5e" value="notVery" name="question5">
+                            <label for="question5e">Vague Millenial Indie Rock</label>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="previous5">Previous</button>
+                        <!-- <button class="next5">Next</button> -->
+                    </div>
+                    <div class="submit">
+                        <input class="button" type="submit" value="Get my results!">
                     </div>
                 </div>
             </section>
-            <div class="submit">
-                <input type="submit" value="Get my results!">
-            </div>
         </form>
         <section class="results">
 
         </section>
     </main>
+    <footer>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-url=""
+        data-size="large" data-text="Find out if you'd survive in a horror movie here!">
+        
+            Tweet</a>
+    </footer>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
 <script src='scripts/main.js'></script> 
 </body>
 </html>
