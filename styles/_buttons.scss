@@ -5,19 +5,35 @@ button, .button {
     border: none;
     text-transform: capitalize;
     font-size: 0.8rem;
+    padding: 10px 5px;
 }
 
 button:hover, .button:hover {
     box-shadow: -4px -4px $red;
 }
 
+.button {
+    width: 160px;
+    padding: 10px 5px;
+    margin-top: 35px;
+}
+
 header button {
-    width: 15%;
-    padding: 15px 5px;
+    width: 160px;
 }
 
 main button {
-    width: 110px;
-    padding: 5px;
-    margin: 5px;
+    width: 110px;;
+    margin: px;
+
+}
+
+main button.retake {
+    width: 140px;
+}
+
+.twitter-share-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
 }

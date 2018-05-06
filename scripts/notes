@@ -1,0 +1,44 @@
+//repeat button functionality 
+
+$(function() {
+   $('.next').on('click', function() {
+       $('#questions>div').each(function() {
+           var id = $(this).index();
+           if ($(this).is(':visible')) {
+               $(this).hide();
+               if (id == $('#questions>div').length - 1) {
+                   $('#questions>div').eq(0).show();
+               } else {
+                   $('#questions>div').eq(id + 1).show();
+               }
+               return false;
+           }
+       });
+   });
+});
+
+<div id="questions">
+<div id="q0">
+<h3>1. The color of the sky is... </h3>
+<input type="radio" name="question0" value="A">Green<br>
+<input type="radio" name="question0" value="B">Blue<br>
+<input type="radio" name="question0" value="C">Red<br>
+<input type="radio" name="question0" value="D">Purple<br>
+</div>
+<div id="q1"  style="display: none">
+<h3>2. Paper comes from... </h3>
+<input type="radio" name="question1" value="A">Water<br>
+<input type="radio" name="question1" value="B">Cement<br>
+<input type="radio" name="question1" value="C">Trees<br>
+<input type="radio" name="question1" value="D">The Sky<br>
+</div>
+<div id="q2"  style="display: none">
+<h3>3. How many hours in a day? </h3>
+<input type="radio" name="question2" value="A">24<br>
+<input type="radio" name="question2" value="B">22<br>
+<input type="radio" name="question2" value="C">16<br>
+<input type="radio" name="question2" value="D">48<br>
+</div>
+</div>
+   
+<button class="next">Next Question</button>

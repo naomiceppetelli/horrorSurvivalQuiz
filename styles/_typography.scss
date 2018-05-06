@@ -6,10 +6,10 @@ body {
 }
 
 h1 {
+    width: 95%;
     font-family: 'Creepster', sans-serif;
     font-size: 6.5rem;
     margin-top: 0;
-    font-weight: light;
     color: white;
     text-align: center;
     text-shadow: 0 15px $red;
@@ -26,24 +26,24 @@ h1 {
  */
 @-webkit-keyframes text-shadow-pop-tl {
   0% {
-    text-shadow: 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red;
+    text-shadow: 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    text-shadow: -1px -1px $red, -2px -2px $red, -3px -3px $red, -4px -4px $red, -5px -5px $red, -6px -6px $red, -7px -7px $red, -8px -8px $red;
+    text-shadow: -1px -1px grey, -2px -2px grey, -3px -3px grey, -4px -4px grey, -5px -5px grey, -6px -6px grey, -7px -7px grey, -8px -8px grey;
     -webkit-transform: translateX(8px) translateY(8px);
             transform: translateX(8px) translateY(8px);
   }
 }
 @keyframes text-shadow-pop-tl {
   0% {
-    text-shadow: 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red, 0 0 $red;
+    text-shadow: 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey, 0 0 grey;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    text-shadow: -1px -1px $red, -2px -2px $red, -3px -3px $red, -4px -4px $red, -5px -5px $red, -6px -6px $red, -7px -7px $red, -8px -8px $red;
+    text-shadow: -1px -1px grey, -2px -2px grey, -3px -3px grey, -4px -4px grey, -5px -5px grey, -6px -6px grey, -7px -7px grey, -8px -8px grey;
     -webkit-transform: translateX(8px) translateY(8px);
             transform: translateX(8px) translateY(8px);
   }
@@ -57,7 +57,12 @@ h1 {
 
 h2 {
     font-size: 1.6rem;
-    // font-weight: ighter;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 label {

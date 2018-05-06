@@ -1,25 +1,26 @@
 header {
     overflow: hidden;
 
+    img {
+        position: absolute;
+        z-index: -1;
+    }
+
     .longBloodDrip {
         width: 30%;
-        position: absolute;
         left: -5%;
         top: -15%;
     }
 
     .bloodSplat {
         width: 35%;
-        height: 50vh;
-        position: absolute;
         bottom: 0;
         left: -3%;
     }
 
     .bloodDrip {
         width: 30%;
-        position: absolute;
-        top: -9%;
+        top: -15%;
         right: 0;
     }
 
