@@ -441,7 +441,7 @@ main button.retake {
     text-shadow: none;
     margin-top: 15px; } }
 
-@media (max-width: 370px) {
+@media (max-width: 414px) {
   header {
     overflow: hidden; }
     header h1 {
