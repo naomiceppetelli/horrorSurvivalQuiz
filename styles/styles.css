@@ -387,7 +387,8 @@ button, .button {
   border: none;
   text-transform: capitalize;
   font-size: 0.8rem;
-  padding: 10px 5px; }
+  padding: 10px 5px;
+  background: white; }
 
 button:hover, .button:hover {
   -webkit-box-shadow: -4px -4px #C1272D;
@@ -455,6 +456,8 @@ main button.retake {
       display: none; }
     header .mobileBlood {
       display: block; }
+  main .results h2 {
+    font-size: 3rem; }
   main .question .questionContainer .answerContainer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;

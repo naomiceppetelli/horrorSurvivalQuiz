@@ -80,6 +80,10 @@
     }
 
     main {
+        .results h2 {
+            font-size: 3rem;
+        }
+
         .question .questionContainer .answerContainer {
             justify-content: center;
             align-items: flex-start;
