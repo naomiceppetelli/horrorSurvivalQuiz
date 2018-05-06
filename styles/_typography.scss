@@ -10,7 +10,6 @@ h1 {
     font-family: 'Creepster', sans-serif;
     font-size: 6.5rem;
     margin-top: 0;
-    color: white;
     text-align: center;
     text-shadow: 0 15px $red;
 }
@@ -58,14 +57,30 @@ h1 {
 h2 {
     font-size: 1.6rem;
     text-align: center;
+    text-shadow: -2px -2px $black;
+}
+
+main h2 {
+    font-size: 2.0rem;
+}
+
+.results h2 {
+    font-family: 'Creepster', sans-serif;
+    text-shadow: 0 10px $red;
+    font-size: 4rem;
 }
 
 h3 {
     font-size: 1.3rem;
     text-align: center;
+    text-shadow: -2px -2px $black;
 }
 
 label {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: lightest;
+}
+
+.results p {
+    font-size: 1rem;
 }

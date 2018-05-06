@@ -1,0 +1,88 @@
+@media (max-width: 770px) {
+
+    header {
+        .bloodSplat {
+            width: 50%;
+        }
+
+        .longBloodDrip {
+        width: 50%;
+        }
+
+        .bloodDrip {
+            width: 40%;
+        }
+    }
+    main h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    header {
+
+        h1 {
+            font-size: 5.0rem;
+        }
+    }
+
+    main {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .question .questionContainer .buttons {
+            width: 100%;
+        }
+
+        .question .questionContainer .answerContainer li input[type="radio"] + label {
+            font-size: 0.9rem;
+        }
+
+        .results h2 {
+            text-shadow: none;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    header {
+        overflow: hidden;
+        
+        h1 {
+            font-size: 4rem;
+        }
+
+        .bloodDrip, .longBloodDrip {
+            display: none;
+        }
+
+        .bloodSplat {
+            left: -20%;
+            bottom: 0;
+            width: 100%;
+             display: none;
+        }
+
+        .mobileBlood {
+            display: block;
+        }
+    }
+
+    main {
+        .question .questionContainer .answerContainer {
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+}

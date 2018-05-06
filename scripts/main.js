@@ -3,22 +3,22 @@ const app = {};
 
 app.answers = {
     very: {
-        result: "Very likely to survive!",
+        result: "You've made it! ",
         twitterResult: "I am very likely to survive a horror movie scenario!",
         description: "Congratulations! You've survived the life shattering experience of being the sole survivor in a horror movie.  Enjoy your years of therapy!"
     },
     somewhat: {
-        result: "Somewhat likely to suvive!",
+        result: "You might make it!",
         twitterResult: "I might survive a horror movie scenario!",
         description: "You almost made it! You saw the second half of the movie at least. You might have died trying to be the hero or in some twist of dramatic irony, either way your luck eventually ran out"
     },
     notVery: {
-        result: "Not very likely to survive!",
+        result: "Probs not getting very far!",
         twitterResult:"I would likely not survive a horror movie scenario",
         description: "You weren't the first to die! But you also weren't far behind. You were probably moved by the disturbing death of your friend right before you and it clouded your judgement. Try to be a little more callous next time if you want to live"
     },
     unlikely: {
-        result: "Super unlikely to survive!",
+        result: "Super unlikely to survive...",
         twitterResult: "It is super unlikely that I would survive a horror movie scenario",
         description: "You were the first to die! We're not sure you were even trying honestly. Take a long hard look at your choices and maybe take the quiz again"
     },
@@ -40,7 +40,6 @@ app.tally = {
 //check the answer array with the answer object and tally up the results
 app.checkScore = function(array) {
     for(let i = 0; i < array.length; i++) {
-        // console.log(array[i])
         app.tally[array[i]] = app.tally[array[i]] + 1;
     }
     app.largestNumber();
@@ -58,13 +57,18 @@ app.largestNumber = function() {
 }
 
 app.displayAnswer = (answer) => {
-    console.log('called twice')
     const finalResult = app.answers[answer].result;
     const finalResultDescription = app.answers[answer].description;
     const finalTwitterBlurb = app.answers[answer].twitterResult;
-    console.log(`${finalResult}, ${finalResultDescription}`)
-    //print on page 
-    $('.question5').hide();
+
+    //checking to see if an answer has been put in for question 5
+    if (!$('input[name=question5]:checked').val()) {
+        alert('Please select an answer')
+    } else if ($('input[name=question5]:checked').val()) {
+        $('.question5').hide();
+    } 
+
+    //adding the results to the page once it has been confirmed that they have inputed an answer
     $('.results').empty()
         .css('display', 'flex')
         .append(`
@@ -93,13 +97,14 @@ app.events = function (result, twitterBlurb, description) {
         const answer3 = $('input[name=question3]:checked').val();
         const answer4 = $('input[name=question4]:checked').val();
         const answer5 = $('input[name=question2]:checked').val();
+
         //putting answers into an array so that can work with the data 
         const answerArray = [answer1, answer2, answer3, answer4, answer5]
+
         //enter answerArray into the tallying function
         app.checkScore(answerArray);
     });
-
-
+   
     //button functionality 
     $('.takeQuiz').on('click', function(){
         $('.headerContainer').hide()
@@ -115,10 +120,13 @@ app.events = function (result, twitterBlurb, description) {
     })
     $('.next1').on('click', function (e) {
         e.preventDefault();
-        $('.question1').hide()
-        $('.question2').fadeIn()
-
-    })
+        if (!$('input[name=question1]:checked').val()) {
+            alert('Please select an answer')
+        } else if ($('input[name=question1]:checked').val()) {
+            $('.question1').hide()
+            $('.question2').fadeIn()   
+        } 
+    });
 
     //previous/next bundle question 2
     $('.previous2').on('click', function (e) {
@@ -129,9 +137,13 @@ app.events = function (result, twitterBlurb, description) {
     })
     $('.next2').on('click', function (e) {
         e.preventDefault();
-        $('.question2').hide()
-        $('.question3').fadeIn()
-    })
+        if (!$('input[name=question2]:checked').val()) {
+            alert('Please select an answer')
+        } else if ($('input[name=question2]:checked').val()) {
+            $('.question2').hide()
+            $('.question3').fadeIn()
+        } 
+    });
 
     //previous/next bundle question 3
     $('.previous3').on('click', function (e) {
@@ -142,9 +154,13 @@ app.events = function (result, twitterBlurb, description) {
     })
     $('.next3').on('click', function (e) {
         e.preventDefault();
-        $('.question3').hide()
-        $('.question4').fadeIn()
-    })
+        if (!$('input[name=question3]:checked').val()) {
+            alert('Please select an answer')
+        } else if ($('input[name=question3]:checked').val()) {
+            $('.question3').hide()
+            $('.question4').fadeIn()
+        } 
+    });
 
     //previous/next bundle question 4
     $('.previous4').on('click', function (e) {
@@ -155,8 +171,12 @@ app.events = function (result, twitterBlurb, description) {
     })
     $('.next4').on('click', function (e) {
         e.preventDefault();
-        $('.question4').hide()
-        $('.question5').fadeIn()
+        if (!$('input[name=question4]:checked').val()) {
+            alert('Please select an answer')
+        } else if ($('input[name=question4]:checked').val()) {
+            $('.question4').hide()
+            $('.question5').fadeIn()
+        } 
     })
 
     //previous/next bundle question 5

@@ -155,7 +155,6 @@ h1 {
   font-family: 'Creepster', sans-serif;
   font-size: 6.5rem;
   margin-top: 0;
-  color: white;
   text-align: center;
   text-shadow: 0 15px #C1272D; }
 
@@ -194,23 +193,40 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  text-align: center; }
+  text-align: center;
+  text-shadow: -2px -2px #232323; }
+
+main h2 {
+  font-size: 2.0rem; }
+
+.results h2 {
+  font-family: 'Creepster', sans-serif;
+  text-shadow: 0 10px #C1272D;
+  font-size: 4rem; }
 
 h3 {
   font-size: 1.3rem;
-  text-align: center; }
+  text-align: center;
+  text-shadow: -2px -2px #232323; }
 
 label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: lightest; }
+
+.results p {
+  font-size: 1rem; }
 
 header {
   overflow: hidden; }
   header img {
     position: absolute;
     z-index: -1; }
+  header .mobileBlood {
+    display: none;
+    top: -18%;
+    width: 100%; }
   header .longBloodDrip {
-    width: 30%;
+    width: 40%;
     left: -5%;
     top: -15%; }
   header .bloodSplat {
@@ -218,7 +234,7 @@ header {
     bottom: 0;
     left: -3%; }
   header .bloodDrip {
-    width: 30%;
+    width: 35%;
     top: -15%;
     right: 0; }
   header .headerContainer {
@@ -277,15 +293,15 @@ body {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      padding-left: 15%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       list-style: none;
-      width: 60%;
-      margin: 0 auto; }
+      width: 100%;
+      margin: 0 auto;
+      padding: 0; }
       .question .questionContainer .answerContainer li {
-        margin: 10px 0; }
+        margin: 10px auto 0; }
         .question .questionContainer .answerContainer li input[type=radio] {
           display: none; }
         .question .questionContainer .answerContainer li input[type=radio] + label {
@@ -296,7 +312,8 @@ body {
           padding-left: 30px;
           z-index: 99; }
         .question .questionContainer .answerContainer li input[type=radio]:checked + label {
-          background: url(../images/bloodSplat.svg) top left no-repeat; }
+          background: url(../images/bloodSplat.svg) top left no-repeat;
+          background-size: 1.6rem; }
     .question .questionContainer .buttons {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -309,10 +326,24 @@ body {
       justify-content: space-around;
       margin-top: 40px;
       width: 50%; }
-    .question .questionContainer .lastButtonDiv {
+    .question .questionContainer .mediaFlexDiv {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .question .questionContainer .mediaFlexDiv .lastButtonDiv {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
 
 .results {
   display: none;
@@ -342,6 +373,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     margin-top: 30px; }
+    .results .social a:hover {
+      color: #C1272D; }
     .results .social p {
       font-size: 0.8rem;
       margin-right: 10px; }
@@ -379,3 +412,53 @@ main button.retake {
   color: white;
   text-decoration: none;
   font-size: 1.2rem; }
+
+@media (max-width: 770px) {
+  header .bloodSplat {
+    width: 50%; }
+  header .longBloodDrip {
+    width: 50%; }
+  header .bloodDrip {
+    width: 40%; }
+  main h2 {
+    font-size: 1.6rem; } }
+
+@media (max-width: 640px) {
+  h2 {
+    font-size: 1.3rem; }
+  header h1 {
+    font-size: 5.0rem; }
+  main h2 {
+    font-size: 1.3rem; }
+  main h3 {
+    font-size: 1.1rem;
+    margin-top: 10px; }
+  main .question .questionContainer .buttons {
+    width: 100%; }
+  main .question .questionContainer .answerContainer li input[type="radio"] + label {
+    font-size: 0.9rem; }
+  main .results h2 {
+    text-shadow: none;
+    margin-top: 15px; } }
+
+@media (max-width: 370px) {
+  header {
+    overflow: hidden; }
+    header h1 {
+      font-size: 4rem; }
+    header .bloodDrip, header .longBloodDrip {
+      display: none; }
+    header .bloodSplat {
+      left: -20%;
+      bottom: 0;
+      width: 100%;
+      display: none; }
+    header .mobileBlood {
+      display: block; }
+  main .question .questionContainer .answerContainer {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; } }

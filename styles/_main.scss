@@ -24,14 +24,14 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            padding-left: 15%;
+            align-items: center;
             list-style: none;
-            width: 60%;
+            width: 100%;
             margin: 0 auto;
+            padding: 0;
 
             li {
-                margin: 10px 0;
+                margin: 10px auto 0;
 
                 input[type=radio] {
                     display: none;
@@ -48,6 +48,7 @@ body {
 
                 input[type=radio]:checked + label {
                     background: url(../images/bloodSplat.svg) top left no-repeat;
+                    background-size: 1.6rem;
                 }
             }
 
@@ -60,8 +61,14 @@ body {
             width: 50%;
         }
 
-        .lastButtonDiv {
+        .mediaFlexDiv {
+            display: flex;
+            flex-flow: column wrap;
             justify-content: center;
+            align-items: center;
+            .lastButtonDiv {
+                justify-content: center;
+            }
         }
     };
 
@@ -80,6 +87,10 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-top: 30px;
+
+        a:hover {
+            color: $red;
+        }
 
         p {
             font-size: 0.8rem;
