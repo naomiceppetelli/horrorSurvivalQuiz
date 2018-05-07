@@ -54,10 +54,13 @@ h1 {
 	        animation: text-shadow-pop-tl 0.6s both;
 }
 
+h2, .results h2, h3 {
+    text-shadow: -2px -2px $black; 
+}
+
 h2 {
     font-size: 1.6rem;
     text-align: center;
-    text-shadow: -2px -2px $black;
 }
 
 main h2 {
@@ -66,14 +69,12 @@ main h2 {
 
 .results h2 {
     font-family: 'Creepster', sans-serif;
-    text-shadow: 0 10px $red;
     font-size: 4rem;
 }
 
 h3 {
     font-size: 1.3rem;
     text-align: center;
-    text-shadow: -2px -2px $black;
 }
 
 label {
